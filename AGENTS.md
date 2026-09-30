@@ -7,6 +7,7 @@ Before guiding a learner, load:
 1. `curriculum/agent-traversal.md`
 2. `curriculum/skill-tree-dag.json`
 3. `progress/progress-tracker.md`
+4. `docs/resources.md` when external references are needed
 
 Use the DAG prerequisites and `done_when` criteria to choose the next smallest action.
 

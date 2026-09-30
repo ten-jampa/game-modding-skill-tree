@@ -12,6 +12,7 @@ Use the checkboxes below as human-visible progress. The DAG is the source of tru
 - [ ] 00 — Map of tModLoader
 - [ ] 01 — Mac setup
 - [ ] 02 — C# for Pythonistas
+- [ ] 02b — DebugApple first mod
 - [ ] 03 — Items, recipes, tooltips
 - [ ] 04 — Projectiles and combat
 - [ ] 05 — ModPlayer and progression

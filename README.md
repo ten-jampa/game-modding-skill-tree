@@ -41,6 +41,8 @@ Orientation
 
 ## Start here
 
+If you just landed here, open [`START-HERE.md`](START-HERE.md) first.
+
 1. Read [`docs/00-map-of-tmodloader.md`](docs/00-map-of-tmodloader.md).
 2. Do [`docs/01-mac-setup.md`](docs/01-mac-setup.md).
 3. Use [`progress/progress-tracker.md`](progress/progress-tracker.md) as your save file.
@@ -64,6 +66,7 @@ The primary curriculum lives in [`docs/`](docs/):
 - `00` — map of tModLoader
 - `01` — Mac setup
 - `02` — C# for Pythonistas
+- `02b` — first real mod: DebugApple
 - `03` — items, recipes, tooltips
 - `04` — projectiles and combat
 - `05` — ModPlayer and progression
@@ -75,6 +78,14 @@ The primary curriculum lives in [`docs/`](docs/):
 - `11` — boss design
 - `12` — AI-agent workflow
 - `13` — debugging and release hygiene
+
+## External resources
+
+Curated official/high-signal references live in [`docs/resources.md`](docs/resources.md).
+
+Troubleshooting help lives in [`docs/troubleshooting.md`](docs/troubleshooting.md).
+
+Glossary lives in [`docs/glossary.md`](docs/glossary.md).
 
 ## Later branches
 

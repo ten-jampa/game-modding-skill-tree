@@ -10,178 +10,363 @@
       "title": "Map of tModLoader",
       "file": "docs/00-map-of-tmodloader.md",
       "requires": [],
-      "unlocks": ["mac-setup", "mod-journal"],
-      "done_when": ["Can explain ModItem, ModProjectile, ModNPC, ModPlayer, and ModSystem", "Can state why the first mod should be tiny"]
+      "unlocks": [
+        "mac-setup",
+        "mod-journal"
+      ],
+      "done_when": [
+        "Can explain ModItem, ModProjectile, ModNPC, ModPlayer, and ModSystem",
+        "Can state why the first mod should be tiny"
+      ]
     },
     {
       "id": "mac-setup",
       "title": "MacBook Setup",
       "file": "docs/01-mac-setup.md",
-      "requires": ["orientation"],
-      "unlocks": ["csharp-basics"],
-      "done_when": ["Steam, Terraria, and tModLoader are installed", "Dotnet SDK is installed", "tModLoader has launched once", "Logs and ModSources paths are known"]
+      "requires": [
+        "orientation"
+      ],
+      "unlocks": [
+        "csharp-basics"
+      ],
+      "done_when": [
+        "Steam, Terraria, and tModLoader are installed",
+        "Dotnet SDK is installed",
+        "tModLoader has launched once",
+        "Logs and ModSources paths are known"
+      ]
     },
     {
       "id": "mod-journal",
       "title": "First Mod Journal",
       "file": "projects/00-first-mod-journal.md",
-      "requires": ["orientation"],
-      "unlocks": ["csharp-basics"],
-      "done_when": ["A journal exists for the first mod", "Environment, goal, current slice, test result, and next slice sections are present"]
+      "requires": [
+        "orientation"
+      ],
+      "unlocks": [
+        "csharp-basics"
+      ],
+      "done_when": [
+        "A journal exists for the first mod",
+        "Environment, goal, current slice, test result, and next slice sections are present"
+      ]
     },
     {
       "id": "csharp-basics",
       "title": "C# for Pythonistas",
       "file": "docs/02-csharp-for-pythonistas.md",
-      "requires": ["mac-setup", "mod-journal"],
-      "unlocks": ["items-recipes"],
-      "done_when": ["Can read a basic ModItem class", "Can distinguish C# errors from tModLoader API uncertainty"]
+      "requires": [
+        "mac-setup",
+        "mod-journal"
+      ],
+      "unlocks": [
+        "debug-apple"
+      ],
+      "done_when": [
+        "Can read a basic ModItem class",
+        "Can distinguish C# errors from tModLoader API uncertainty"
+      ]
+    },
+    {
+      "id": "debug-apple",
+      "title": "Your First tModLoader Mod: DebugApple",
+      "file": "docs/02-your-first-mod-debug-apple.md",
+      "requires": [
+        "csharp-basics"
+      ],
+      "unlocks": [
+        "items-recipes"
+      ],
+      "artifact": "debug-apple",
+      "done_when": [
+        "DebugApple source mod exists",
+        "One custom item class exists",
+        "Mod builds/reloads in tModLoader",
+        "Item is tested in-game",
+        "Journal entry and commit exist"
+      ]
     },
     {
       "id": "items-recipes",
       "title": "Items, Recipes, and Tooltips",
       "file": "docs/03-items-recipes-tooltips.md",
-      "requires": ["csharp-basics"],
-      "unlocks": ["projectiles-combat"],
+      "requires": [
+        "debug-apple"
+      ],
+      "unlocks": [
+        "projectiles-combat"
+      ],
       "artifact": "debug-apple or training-arsenal",
-      "done_when": ["One item exists", "One recipe exists", "Localization is present", "The item appears in-game"]
+      "done_when": [
+        "One item exists",
+        "One recipe exists",
+        "Localization is present",
+        "The item appears in-game"
+      ]
     },
     {
       "id": "projectiles-combat",
       "title": "Projectiles and Combat Behavior",
       "file": "docs/04-projectiles-combat.md",
-      "requires": ["items-recipes"],
-      "unlocks": ["modplayer-progression", "buffs-status"],
+      "requires": [
+        "items-recipes"
+      ],
+      "unlocks": [
+        "modplayer-progression",
+        "buffs-status"
+      ],
       "artifact": "projectile-lab",
-      "done_when": ["One weapon shoots one custom projectile", "Projectile lifetime and collision are verified in-game"]
+      "done_when": [
+        "One weapon shoots one custom projectile",
+        "Projectile lifetime and collision are verified in-game"
+      ]
     },
     {
       "id": "modplayer-progression",
       "title": "ModPlayer and Player Progression",
       "file": "docs/05-modplayer-progression.md",
-      "requires": ["projectiles-combat"],
-      "unlocks": ["npcs-enemy-ai", "ui-skill-tree"],
+      "requires": [
+        "projectiles-combat"
+      ],
+      "unlocks": [
+        "npcs-enemy-ai",
+        "ui-skill-tree"
+      ],
       "artifact": "training-rank",
-      "done_when": ["Player XP or skill points are stored", "Save/load is tested", "One bonus applies correctly"]
+      "done_when": [
+        "Player XP or skill points are stored",
+        "Save/load is tested",
+        "One bonus applies correctly"
+      ]
     },
     {
       "id": "npcs-enemy-ai",
       "title": "NPCs and Enemy AI",
       "file": "docs/06-npcs-enemy-ai.md",
-      "requires": ["modplayer-progression"],
-      "unlocks": ["drops-loops", "boss-design"],
+      "requires": [
+        "modplayer-progression"
+      ],
+      "unlocks": [
+        "drops-loops",
+        "boss-design"
+      ],
       "artifact": "enemy-pack",
-      "done_when": ["At least one enemy spawns", "Enemy behavior is visible", "Drops or test hooks are verified"]
+      "done_when": [
+        "At least one enemy spawns",
+        "Enemy behavior is visible",
+        "Drops or test hooks are verified"
+      ]
     },
     {
       "id": "drops-loops",
       "title": "Drops and Progression Loops",
       "file": "docs/07-drops-progression-loops.md",
-      "requires": ["npcs-enemy-ai"],
-      "unlocks": ["buffs-status", "ui-skill-tree"],
+      "requires": [
+        "npcs-enemy-ai"
+      ],
+      "unlocks": [
+        "buffs-status",
+        "ui-skill-tree"
+      ],
       "artifact": "novice-adventurer-loop",
-      "done_when": ["Enemy drops feed a recipe", "Recipe creates an upgrade", "The loop gives a reason to use the content"]
+      "done_when": [
+        "Enemy drops feed a recipe",
+        "Recipe creates an upgrade",
+        "The loop gives a reason to use the content"
+      ]
     },
     {
       "id": "buffs-status",
       "title": "Buffs, Debuffs, and Status Effects",
       "file": "docs/08-buffs-status-effects.md",
-      "requires": ["projectiles-combat"],
-      "unlocks": ["ui-skill-tree", "boss-design"],
+      "requires": [
+        "projectiles-combat"
+      ],
+      "unlocks": [
+        "ui-skill-tree",
+        "boss-design"
+      ],
       "artifact": "spark-status-system",
-      "done_when": ["One debuff exists", "A weapon or projectile applies it", "One item or effect responds to it"]
+      "done_when": [
+        "One debuff exists",
+        "A weapon or projectile applies it",
+        "One item or effect responds to it"
+      ]
     },
     {
       "id": "ui-skill-tree",
       "title": "UI Skill Tree Prototype",
       "file": "docs/09-ui-skill-tree-prototype.md",
-      "requires": ["modplayer-progression", "drops-loops", "buffs-status"],
-      "unlocks": ["data-driven-skill-tree"],
+      "requires": [
+        "modplayer-progression",
+        "drops-loops",
+        "buffs-status"
+      ],
+      "unlocks": [
+        "data-driven-skill-tree"
+      ],
       "artifact": "skill-tree-prototype",
-      "done_when": ["A hotkey opens UI", "Three nodes display", "Clicking one spends a point", "Unlock persists after reload"]
+      "done_when": [
+        "A hotkey opens UI",
+        "Three nodes display",
+        "Clicking one spends a point",
+        "Unlock persists after reload"
+      ]
     },
     {
       "id": "data-driven-skill-tree",
       "title": "Data-Driven Skill Trees",
       "file": "docs/10-data-driven-skill-trees.md",
-      "requires": ["ui-skill-tree"],
-      "unlocks": ["boss-design", "agent-workflow"],
+      "requires": [
+        "ui-skill-tree"
+      ],
+      "unlocks": [
+        "boss-design",
+        "agent-workflow"
+      ],
       "artifact": "expandable-skill-tree",
-      "done_when": ["Skill definitions are separated from UI", "At least six nodes validate", "Existing save IDs are stable"]
+      "done_when": [
+        "Skill definitions are separated from UI",
+        "At least six nodes validate",
+        "Existing save IDs are stable"
+      ]
     },
     {
       "id": "boss-design",
       "title": "Boss Design Fundamentals",
       "file": "docs/11-boss-design.md",
-      "requires": ["npcs-enemy-ai", "buffs-status"],
-      "unlocks": ["capstone-novice-realms"],
+      "requires": [
+        "npcs-enemy-ai",
+        "buffs-status"
+      ],
+      "unlocks": [
+        "capstone-novice-realms"
+      ],
       "artifact": "training-construct",
-      "done_when": ["Boss can be summoned", "At least two phases work", "Loot and despawn behavior are tested"]
+      "done_when": [
+        "Boss can be summoned",
+        "At least two phases work",
+        "Loot and despawn behavior are tested"
+      ]
     },
     {
       "id": "agent-workflow",
       "title": "AI-Agent Workflow",
       "file": "docs/12-agent-workflow.md",
-      "requires": ["data-driven-skill-tree"],
-      "unlocks": ["debugging-release", "universal-modder"],
-      "done_when": ["Agent prompts are used for one tiny change", "Diff is reviewed", "Verification output is captured"]
+      "requires": [
+        "data-driven-skill-tree"
+      ],
+      "unlocks": [
+        "debugging-release",
+        "universal-modder"
+      ],
+      "done_when": [
+        "Agent prompts are used for one tiny change",
+        "Diff is reviewed",
+        "Verification output is captured"
+      ]
     },
     {
       "id": "debugging-release",
       "title": "Debugging and Release Hygiene",
       "file": "docs/13-debugging-release.md",
-      "requires": ["agent-workflow", "boss-design"],
-      "unlocks": ["capstone-novice-realms"],
-      "done_when": ["Release checklist is complete", "Fresh world/character tested", "Logs checked"]
+      "requires": [
+        "agent-workflow",
+        "boss-design"
+      ],
+      "unlocks": [
+        "capstone-novice-realms"
+      ],
+      "done_when": [
+        "Release checklist is complete",
+        "Fresh world/character tested",
+        "Logs checked"
+      ]
     },
     {
       "id": "capstone-novice-realms",
       "title": "NoviceRealms Capstone",
       "file": "projects/08-capstone-novice-realms.md",
-      "requires": ["data-driven-skill-tree", "boss-design", "debugging-release"],
-      "unlocks": ["minecraft-fabric", "rimworld", "unity-games", "bethesda-games", "universal-modder"],
+      "requires": [
+        "data-driven-skill-tree",
+        "boss-design",
+        "debugging-release"
+      ],
+      "unlocks": [
+        "minecraft-fabric",
+        "rimworld",
+        "unity-games",
+        "bethesda-games",
+        "universal-modder"
+      ],
       "artifact": "novice-realms",
-      "done_when": ["Capstone feature checklist complete", "Playable release created", "Known issues documented"]
+      "done_when": [
+        "Capstone feature checklist complete",
+        "Playable release created",
+        "Known issues documented"
+      ]
     },
     {
       "id": "universal-modder",
       "title": "universal-modder as Later-Stage Tool",
       "file": "docs/later-stage-tools/universal-modder.md",
-      "requires": ["agent-workflow", "capstone-novice-realms"],
+      "requires": [
+        "agent-workflow",
+        "capstone-novice-realms"
+      ],
       "unlocks": [],
-      "done_when": ["Can explain what universal-modder automates", "Can identify which parts are unsafe for beginner use"]
+      "done_when": [
+        "Can explain what universal-modder automates",
+        "Can identify which parts are unsafe for beginner use"
+      ]
     },
     {
       "id": "minecraft-fabric",
       "title": "Minecraft Fabric Branch",
       "file": "paths/minecraft-fabric.md",
-      "requires": ["capstone-novice-realms"],
+      "requires": [
+        "capstone-novice-realms"
+      ],
       "unlocks": [],
-      "done_when": ["One visible Fabric mod change works"]
+      "done_when": [
+        "One visible Fabric mod change works"
+      ]
     },
     {
       "id": "rimworld",
       "title": "RimWorld Branch",
       "file": "paths/rimworld.md",
-      "requires": ["capstone-novice-realms"],
+      "requires": [
+        "capstone-novice-realms"
+      ],
       "unlocks": [],
-      "done_when": ["One visible RimWorld mod change works"]
+      "done_when": [
+        "One visible RimWorld mod change works"
+      ]
     },
     {
       "id": "unity-games",
       "title": "Unity Games Branch",
       "file": "paths/unity-games.md",
-      "requires": ["capstone-novice-realms"],
+      "requires": [
+        "capstone-novice-realms"
+      ],
       "unlocks": [],
-      "done_when": ["One visible Unity/BepInEx mod change works"]
+      "done_when": [
+        "One visible Unity/BepInEx mod change works"
+      ]
     },
     {
       "id": "bethesda-games",
       "title": "Bethesda Games Branch",
       "file": "paths/bethesda-games.md",
-      "requires": ["capstone-novice-realms"],
+      "requires": [
+        "capstone-novice-realms"
+      ],
       "unlocks": [],
-      "done_when": ["One visible Creation Kit/xEdit mod change works"]
+      "done_when": [
+        "One visible Creation Kit/xEdit mod change works"
+      ]
     }
   ]
 }
