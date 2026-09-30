@@ -4,6 +4,11 @@ Use this as your save file.
 
 ## Core path
 
+Canonical DAG: [`../curriculum/skill-tree-dag.json`](../curriculum/skill-tree-dag.json)
+Agent traversal guide: [`../curriculum/agent-traversal.md`](../curriculum/agent-traversal.md)
+
+Use the checkboxes below as human-visible progress. The DAG is the source of truth for prerequisites.
+
 - [ ] 00 — Map of tModLoader
 - [ ] 01 — Mac setup
 - [ ] 02 — C# for Pythonistas

@@ -46,6 +46,17 @@ Orientation
 3. Use [`progress/progress-tracker.md`](progress/progress-tracker.md) as your save file.
 4. Pick the first milestone: [`milestones/milestone-0-orientation.md`](milestones/milestone-0-orientation.md).
 
+## Agent-traversable DAG
+
+For humans, follow the docs below.
+
+For AI agents, use:
+
+- [`curriculum/agent-traversal.md`](curriculum/agent-traversal.md)
+- [`curriculum/skill-tree-dag.json`](curriculum/skill-tree-dag.json)
+
+The JSON graph names each node, prerequisite, unlocked branch, target artifact, and `done_when` criteria.
+
 ## Main path
 
 The primary curriculum lives in [`docs/`](docs/):
@@ -98,3 +109,7 @@ See [`projects/08-capstone-novice-realms.md`](projects/08-capstone-novice-realms
 Do not start by designing the giant skill tree.
 
 Start by making **one unlock do one thing**.
+
+## Contributors
+
+This repo is intentionally AI-assisted. See [`CONTRIBUTORS.md`](CONTRIBUTORS.md) for the human + Hermes collaboration note.

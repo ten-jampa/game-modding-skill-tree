@@ -2,6 +2,14 @@
 
 This repo is a learning curriculum, not a production mod.
 
+Before guiding a learner, load:
+
+1. `curriculum/agent-traversal.md`
+2. `curriculum/skill-tree-dag.json`
+3. `progress/progress-tracker.md`
+
+Use the DAG prerequisites and `done_when` criteria to choose the next smallest action.
+
 ## Style
 
 - Be concrete. Prefer tiny working projects over abstract explanations.
